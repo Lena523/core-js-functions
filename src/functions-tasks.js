@@ -76,8 +76,15 @@ function getArgumentsCount(funcs) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  return function power(x) {
+    if (exponent === 2) {
+      let variable = x;
+      variable *= variable;
+      return variable;
+    }
+    return Math.sqrt(x);
+  };
 }
 
 /**
